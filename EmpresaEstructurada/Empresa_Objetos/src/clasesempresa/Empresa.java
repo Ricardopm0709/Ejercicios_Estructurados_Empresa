@@ -7,53 +7,54 @@ public class Empresa {
     ArrayList<empleado> empleados;
 
     public Empresa() {
-        empleados = new ArrayList<Empleado>();
-
+        empleados = new ArrayList<>();
     }
 
-    public void contratarEmpleado (Empleado e) {
+    public void contratarEmpleado(empleado e) {
         empleados.add(e);
     }
 
     public int getTotalempleados() {
         return empleados.size();
-
     }
 
     public void nombreSalario() {
-        for (Empleado e: empleados){
-        System.out.println("Nombre:" + e.getNombre() + "Salario:" + e.getSalario());
-
+        for(empleado e:empleados) {
+            System.out.println("Nombre: " + e.getNombre() + " Salario" + e.getSalario());
         }
+        
     }
-    public double getTotalSalario () {
+
+    public double getTotalSalarios() {
         double total = 0;
-        for (Empleado e:empleado) {
-            total = + e.getSalario();
-
+        for(empleado e:empleados) {
+            total = total + e.getSalario();
         }
+        return total;
+    }
 
-        public void EmpleadoMayorSalario() {
-            Empleado EmpleadoMayorSalario = empleados.get(index:0);
-            double mayorSalario = empleados.get(0).getSalario();
-            if (e.getSalario() > mayorSalario) {
-                mayorSalario = empleados.getSalario();
+    public void EmpleadoMayorSalario() {
+        Empleado empMayorSalario = empleados.get(0);
+        double mayorSalario =empleados.get(0).getSalario();
+        for(Empleado e:empleados) {
+            if(e.getSalario() > mayorSalario) {
+                mayorSalario = e.getSalario();
                 empMayorSalario = e;
-
             }
         }
-        System.out.println( "Nombre:" + empMayorSalario.getNombre() + "Salario" + empSalario.getSalario());
+        System.out.println("Nombre: " + empMayorSalario.getNombre() + " Salario: " + empMayorSalario.getSalario());
+    }
 
 
-        public void EmpleadoMenorSalario() {
-            Empleado EmpleadoMenorSalario = empleados.get(index:0);
-            double menorSalario = empleados.get(0).getSalario();
-            if (e.getSalario() > menorSalario) {
-                menorSalario = empleados.getSalario();
+    public void EmpleadoMenorSalario() {
+        Empleado empMenorSalario = empleados.get(0);
+        double menorSalario =empleados.get(0).getSalario();
+        for(Empleado e:empleados) {
+            if(e.getSalario() > menorSalario) {
+                menorSalario = e.getSalario();
                 empMenorSalario = e;
-
             }
         }
-        System.out.println( "Nombre:" + empMenorSalario.getNombre() + "Salario" + empSalario.getSalario());
+        System.out.println("Nombre: " + empMenorSalario.getNombre() + " Salario: " + empMenorSalario.getSalario());
     }
 }
